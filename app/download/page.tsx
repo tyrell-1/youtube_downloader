@@ -450,7 +450,7 @@ export default function DownloadPage() {
         );
 
         // Combine chunks and create blob
-        const blob = new Blob(chunks);
+        const blob = new Blob(chunks as BlobPart[]);
         const downloadUrl = window.URL.createObjectURL(blob);
 
         // Trigger download
